@@ -162,7 +162,9 @@
             {% if global_toc %}
               {{ global_toc }}
             {% else %}
+          
               <!-- Local TOC -->
+          
               <div class="local-toc">{{ toc }}</div>
             {% endif %}
           {% endblock %}
@@ -180,7 +182,6 @@
           <a href="{{ pathto(master_doc) }}">{{ project }}</a>
         {% endblock %}
       </nav>
-
 
       <div class="wy-nav-content">
       {%- block content %}
@@ -221,7 +222,9 @@
 {# Do not conflict with RTD insertion of analytics script #}
   {% if not READTHEDOCS %}
     {% if theme_analytics_id %}
+      
     <!-- Theme Analytics -->
+      
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -258,9 +261,7 @@
    
   <!-- End Google Tag Manager (noscript) -->
 
-
-
-
+      
   {%- block footer %} {% endblock %}
 
 </body>
